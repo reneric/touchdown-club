@@ -1,24 +1,20 @@
  <nav class="top-bar" data-topbar>
     <ul class="title-area">
       <li class="name">
-        <h1><%= link_to "Touchdown Club", '#', id: "logo" %></h1>
+        <h1><%= link_to "Touchdown Club", root_path, id: "logo" %></h1>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
     </ul>
     <section class="top-bar-section">
       <ul class="right">
         <li class="has-dropdown">
-        <a href="#">User Name</a>
-        <ul class="dropdown">
-          <li>
-            <%= link_to "Sign In", '#' %>
-          </li>
-          <li>
-            <%= link_to "Sign Out", '#' %>
-          </li>
-          <li>
-            <%= link_to "Settings", '#' %>
-          </li>
+        <%= if signed_in? %>
+          <li><%= link_to "Settings", '#' %></li>
+          <li><%= link_to "Sign out", '#' %></li>
+        <% else %>
+          <li><%= link_to "Sign up", '#' %></li>
+          <li><%= link_to "Sign in", '#' %></li>
+        <% end %>
         </ul>
         </li>
       </ul>
