@@ -8,15 +8,21 @@
     <section class="top-bar-section">
       <ul class="right">
         <li class="has-dropdown">
-        <%= if signed_in? %>
-          <li><%= link_to "Settings", '#' %></li>
-          <li><%= link_to "Sign out", '#' %></li>
+        <% if signed_in? %>
+          <%= link_to "#{current_user.name}", '#' %>
         <% else %>
-          <li><%= link_to "Sign up", '#' %></li>
-          <li><%= link_to "Sign in", '#' %></li>
+          <%= link_to "Login", '#' %>
         <% end %>
-        </ul>
-        </li>
+            <ul class="dropdown">
+        <% if signed_in? %>
+            <li><%= link_to "Settings", '#' %></li>
+            <li><%= link_to "Sign out", '#' %></li>
+        <% else %>
+            <li><%= link_to "Sign up", signup_path %></li>
+            <li><%= link_to "Sign in", signin_path %></li>
+        <% end %>
+            </ul>
+          </li>
       </ul>
       <ul class="left"><li><a href="#">Teams</a></li></ul>
     </section>

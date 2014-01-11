@@ -8,7 +8,8 @@
 
     <%= stylesheet_link_tag "application", media: "all",
                                    "data-turbolinks-track" => true%>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "vendor/modernizr", media: "all",
+                                   "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -20,7 +21,7 @@
       </div>
     </div>
     <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
-    <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "application", media: "all",
+                                   "data-turbolinks-track" => true %>
   </body>
 </html>
