@@ -11,6 +11,9 @@ gem 'jbuilder', '~> 1.2'
 # Foundation for Rails by Zurb
 gem 'foundation-rails'
 
+# Add support for HAML Templates
+gem 'haml'
+gem 'haml-rails'
 
 
 group :doc do

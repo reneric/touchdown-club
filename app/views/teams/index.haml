@@ -1,0 +1,7 @@
+- provide(:title, 'All teams')
+%h1 All teams
+%ul.teams
+  - @teams.each do |team|
+    %li
+      = link_to "#{team.team} #{team.mascot}", team
+      = link_to "(delete)", team, method: :delete, data: { confirm: "You sure?"}

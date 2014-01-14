@@ -1,0 +1,12 @@
+- provide(:title, @team.team + ' ' + @team.mascot)
+.row
+  .container
+    %aside.small-12.medium-4.column.logo
+    %section.small-12.medium-7.column
+      %h1
+        = @team.team + ' ' + @team.mascot + ' (' + @team.abbr + ')'
+      %ul
+        %li
+          = "Conference: #{@team.conference}"
+        %li
+          = "Division: #{@team.division}"

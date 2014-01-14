@@ -1,0 +1,19 @@
+= provide(:title, "Create New Team")
+%h1 Create New Team
+.row
+  .container
+    .small-12.medium-6.offset3
+      = form_for(:team, url: teams_path) do |f|
+        = f.label :abbr
+        = f.text_field :abbr
+        = f.label :team
+        = f.text_field :team
+        = f.label :mascot
+        = f.text_field :mascot
+        = f.label :conference
+        = f.text_field :conference
+        = f.label :division
+        = f.text_field :division
+        = f.submit "Create team", class: "btn btn-large btn-primary"
+        %p
+          #{link_to "Create another new team!", new_team_path}
