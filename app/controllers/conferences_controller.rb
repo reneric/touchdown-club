@@ -1,5 +1,7 @@
 class ConferencesController < ApplicationController
-
+  def to_param
+    name
+  end
   def new
   end
 
