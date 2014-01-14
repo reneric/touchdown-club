@@ -1,0 +1,51 @@
+- provide(:title, 'View NFL')
+.small-6.column
+  %h1 AFC North
+  %ul.afc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "AFC North"
+        %li
+          = link_to "#{team.team}  #{team.mascot}", team
+  %h1 AFC South
+  %ul.afc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "AFC South"
+        %li
+          = link_to "#{team.team} #{team.mascot}", team
+  %h1 AFC East
+  %ul.afc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "AFC East"
+        %li
+          = link_to "#{team.team} #{team.mascot}", team
+  %h1 AFC West
+  %ul.afc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "AFC West"
+        %li
+          = link_to "#{team.team} #{team.mascot}", team
+.small-6.column
+  %h1 NFC North
+  %ul.nfc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "NFC North"
+        %li
+          = link_to "#{team.team}  #{team.mascot}", team
+  %h1 NFC South
+  %ul.nfc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "NFC South"
+        %li
+          = link_to "#{team.team} #{team.mascot}", team
+  %h1 NFC East
+  %ul.nfc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "NFC East"
+        %li
+          = link_to "#{team.team} #{team.mascot}", team
+  %h1 NFC West
+  %ul.nfc.teams
+    -@nfl.each do |team|
+      -if "#{team.conference} #{team.division}" == "NFC West"
+        %li
+          = link_to "#{team.team} #{team.mascot}", team
